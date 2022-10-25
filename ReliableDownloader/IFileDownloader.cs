@@ -10,7 +10,7 @@ namespace ReliableDownloader
         /// <param name="localFilePath">The local file path to save the file to</param>
         /// <param name="onProgressChanged">An action to call which prints progress</param>
         /// <returns>True or false, depending on if download completes and writes to file system okay</returns>
-        Task<bool> DownloadFile(string contentFileUrl, string localFilePath, Action<FileProgress> onProgressChanged);
+        Task<bool> DownloadFile(Action<FileProgress> onProgressChanged);
         
         /// <summary>
         /// Cancels any in progress downloads
